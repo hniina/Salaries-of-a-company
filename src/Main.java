@@ -1,4 +1,13 @@
+/*
+Is your design ready to easily accept changes in how to calculate the total salary? for example for calculating the total salary taking into account taxes.
+yes, modifying the getTotalsalary() method.
+for example, you could add tax calculation that reduces the total salary based on tax rules
 
+
+How to implement the case where I don't use all of the 100 "spaces" for workers? I.e my company only have 20.
+since I'm using an ArrayList . list size adjusts dynamically, so you can add just 20 workers
+
+ */
 
 
 import java.util.ArrayList;
@@ -16,12 +25,12 @@ class Worker {
         this.complement = complement;
     }
 
-    // Method to
+    // total salary
     public double getTotalSalary() {
         return baseSalary + complement;
     }
 
-    // Method to display worker information
+    // display worker information
     public void displayWorker() {
         System.out.println("Name: " + name + ", Base Salary: " + baseSalary +
                 ", Complement: " + complement + ", Total Salary: " + getTotalSalary());
@@ -30,7 +39,7 @@ class Worker {
 
 // Manager class to handle multiple workers
 class WorkerManager {
-    private ArrayList<Worker> workers;  // List to store workers
+    private final ArrayList<Worker> workers;  // List to store workers
 
     // Constructor to initialize worker manager
     public WorkerManager() {
